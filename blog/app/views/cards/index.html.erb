@@ -1,0 +1,15 @@
+<h1>Blogs</h1>
+<%= link_to "Add new post", new_card_path %>
+
+ <table>
+ <% @cards.each do |card| %>
+   <tr>
+   <td><%= link_to card.title, card_path(card)%></td>
+   <td><%= button_to "edit", edit_card_path(card), method:"get"%></td>
+   <td><%= button_to "delete", card_path(card), method:"delete"%></td>
+   </tr>
+   <% end %>
+ </table>
+   
+
+

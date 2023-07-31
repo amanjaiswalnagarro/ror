@@ -1,0 +1,23 @@
+
+  <div class="container">
+    <div id="<%= dom_id(blog) %>" class="blog">
+      <h1 class="title"><%= blog.title %></h1>
+      <div class="description">
+   <%= blog.description %>
+
+        <% if @blog.ratings.any? %>
+          <p>Rating: <%= @blog.average_rating %>/5</p>
+        <% else %>
+          <p>No ratings yet.</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="edit-links">
+    <% if @blog.user == current_user || current_user.admin %>
+      <%= link_to "Edit Blog", edit_blog_path(@blog) %>
+      <%= button_to "Delete blog", @blog, method: :delete , class: "btn-danger"%>
+    <% end %>
+    </div>
+  </div>
+
+ 

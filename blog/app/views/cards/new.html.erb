@@ -1,0 +1,14 @@
+<%= form_with(model: @card, url: cards_path) do |form| %>
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div class="field">
+      <%= form.label :text %>
+      <%= form.text_area :text %>
+    </div>
+    <div class="actions">
+      <%= form.submit "Create Card" %>
+    </div>
+  <% end %>
+  

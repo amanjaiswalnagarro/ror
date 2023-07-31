@@ -1,0 +1,379 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* Custom CSS for Devise Login Form */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .field input[type="email"],
+  .field input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .field input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .actions {
+    text-align: center;
+  }
+  
+  .actions input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Additional styles for Bootstrap buttons */
+  .btn {
+    margin: 5px;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    outline: none;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+  }
+  
+  .btn-success {
+    background-color: #9cffb3;
+  }
+  
+  /* Add custom styles for the links in the "shared/links" partial */
+  .devise-links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Add custom styles for the alert message */
+  .alert {
+    padding: 10px;
+    border-radius: 5px;
+    color: #721c24;
+  }
+
+  
+/* app/assets/stylesheets/custom.css */
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    width: 100vw; 
+    overflow-x: hidden; 
+    flex-direction: row; 
+  }
+
+.blog-card {
+    height: 300px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-card:hover{
+    transition: 200ms ease-in;
+    transform: scale(1.1) ;
+  }
+  
+  .blog-card h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card .btn {
+    font-size: 14px;
+  }
+  
+  .blog-card .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .blog-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  .blog-heading{
+    text-align: center;
+  }
+/* 
+  show css code */
+
+  /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .notice {
+    color: green;
+    font-size: 18px;
+  }
+  
+  .blog {
+    margin-bottom: 30px;
+  }
+  
+  .rating-info {
+    font-size: 16px;
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .field label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .field select {
+    font-size: 16px;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  
+  .actions input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .actions input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .edit-links {
+    margin-top: 20px;
+  }
+  
+  .edit-links a {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .edit-links a:last-child {
+    margin-right: 0;
+  }
+
+
+  .comments-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .comment-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .comment p {
+    font-size: 16px;
+  }
+
+  .comment-list{
+    width: 500px;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+  }
+
+
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px; /* Add padding from the left and right sides */
+    background-color: whitesmoke;
+  }
+  
+  .blog {
+    text-align: center; /* Center align the blog content */
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    text-align: left; /* Left align the description */
+    margin-left: 20px; /* Add some space from the left side */
+  }
+
+/*navbar*/
+/* app/assets/stylesheets/application.scss */
+
+.navbar {
+    background-color: #007bff; /* Set the navbar background color */
+    padding: 10px;
+  }
+  
+  .navbar-item {
+    margin: 5px;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-end {
+    display: flex;
+  }
+  
+  .button {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button.is-primary {
+    background-color: #007bff;
+  }
+  
+  .button.is-danger {
+    background-color: #dc3545;
+  }
+  
+  .button.is-info {
+    background-color: #17a2b8;
+  }
+
+
+
+  .rating-form-items{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+select {
+    width: 50px;
+    height: 40px;
+    font-size: large;
+}
+
+.new-form-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-form-container > form{
+    background-color: whitesmoke;
+    padding: 40px;
+    box-shadow: 1px 1px 1px black;
+}
+form > div{
+    margin: 15px;
+}

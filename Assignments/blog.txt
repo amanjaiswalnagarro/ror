@@ -1,0 +1,44 @@
+Create Ruby On Rails Blog Managment APP
+
+ 
+
+Create two user:
+    ADMIN
+    USER
+
+ 
+
+Security:
+    Integrate User SignUp with Gmail/OKTA
+    Implement devise gem for Authentication
+
+ 
+
+Roles of ADMIN:
+    1. Manages the creation Deletion of USER
+    2. Can make any USER as ADMIN user as Well
+    3. Can see Graphical Repesentation of No of USER, No of Posts over Application
+    4. Can see all The post its (comments and Rating) associated with UserID { Pagination with 10 Record at a time only } [can be done via rails or DataTable(js)]
+    5. can Search Blogs with tittle as well ( ADMIN can see private as well as public blogs too)
+
+ 
+
+Roles of USER:
+    1. Can Create Blogs with ACTION TEXT VIEW and Publish them with Status Public Private
+    2. Can able to see his own Blogs (if blogs are public) and Others To with User ID { Pagination with 10 Record at a time only }
+    3. Can comment on others blog and also can rate it (in 5 starts)
+    4. Private Blogs were not visible to other USER
+    5. can serach blogs with its tittle as well
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+DataBase Used:
+    SQLITE3

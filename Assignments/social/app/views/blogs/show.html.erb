@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+  <div class="blog">
+    <%= render @blog %>
+  </div>
+
+  <!-- Rating Form -->
+  <div class="rating-form-container">
+  <% if @blog.ratings.exists?(user: current_user) %>
+  <p class="rating-info">You have already rated this blog with a rating of <%= @blog.ratings.find_by(user: current_user).value %> out of 5.</p>
+  <% else %>
+  <%= form_with(model: [@blog, Rating.new], url: blog_ratings_path(@blog), method: :post) do |f| %>
+    <div class="rating-form-items">
+     <%= f.select :value, options_for_select(1..5),  { class: "btn" }%>
+     <%= f.submit "Rate", class:"btn btn-primary"%>
+    </div>
+ 
+  <% end %>
+  <% end %>
+  </div>
+
+
+
+
+  <div class="comments-container">
+    <h3 class="comment-heading">Comments</h3>
+    
+    <!-- app/views/blogs/show.html.erb -->
+
+<!-- Comment Form for Blog -->
+<%= form_with(model: [@blog, @blog.comments.new], url: blog_comments_path(@blog), method: :post) do |f| %>
+  <!-- ... other comment form fields ... -->
+
+  <!-- Add a field for the comment body -->
+  <div class="field">
+    <%= f.text_area :body %>
+  </div>
+
+  <!-- Add the hidden fields for commentable_id and commentable_type -->
+  <%= f.hidden_field :commentable_id, value: @blog.id %>
+  <%= f.hidden_field :commentable_type, value: "Blog" %>
+
+  <!-- Add the submit button -->
+  <div class="actions">
+    <%= f.submit "Add Comment" %>
+  </div>
+  <% end %>
+
+   
+    <div class="comment-list">
+    <!-- Comments List -->
+    <% @blog.comments.each do |comment| %>
+      <div class="comment">
+      <% if comment.user %>
+        <p><strong><%= comment.user.email %>:</strong> <%= comment.body %></p>
+      <% else %>
+        <p><strong>Anonymous:</strong> <%= comment.body %></p>
+      <% end %>
+    </div>  
+    <% end %>
+    
+  </div>
+
+  <%= link_to "Back to blogs", blogs_path %>
+
+</body>
+</html>
